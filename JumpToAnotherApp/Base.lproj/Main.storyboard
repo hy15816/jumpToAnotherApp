@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAC-6w-EDj">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.68029721580000002" green="1" blue="0.98445684710000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="点击跳转到App B">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="jumpClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dbo-0R-RZk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是App A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0k-DD-QSi">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3S2-eG-HFE">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.68029721580000002" green="1" blue="0.98445684710000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="点击跳转到淘宝端并打开一个商品,若本地没有，跳到下载页面">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="jumpClick2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="K68-Jy-KDR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3S2-eG-HFE" firstAttribute="top" secondItem="eAC-6w-EDj" secondAttribute="bottom" constant="10" id="09O-ZE-4QW">
+                                <variation key="widthClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="eAC-6w-EDj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="1Zf-on-n4q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eAC-6w-EDj" secondAttribute="trailing" constant="10" id="HBb-ab-GPF"/>
+                            <constraint firstAttribute="centerX" secondItem="L0k-DD-QSi" secondAttribute="centerX" id="R6a-Pp-wy5"/>
+                            <constraint firstAttribute="centerX" secondItem="3S2-eG-HFE" secondAttribute="centerX" id="Zhg-Yl-joE"/>
+                            <constraint firstItem="3S2-eG-HFE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="a7T-mx-tBr">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="eAC-6w-EDj" firstAttribute="top" secondItem="L0k-DD-QSi" secondAttribute="bottom" constant="20" id="cmJ-46-l4a"/>
+                            <constraint firstAttribute="centerY" secondItem="eAC-6w-EDj" secondAttribute="centerY" id="eVF-ee-075"/>
+                            <constraint firstItem="3S2-eG-HFE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="w7A-4V-qnC">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="eAC-6w-EDj" secondAttribute="centerX" id="wAa-vP-8ru"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="eAC-6w-EDj"/>
+                                <exclude reference="L0k-DD-QSi"/>
+                                <exclude reference="3S2-eG-HFE"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1Zf-on-n4q"/>
+                                <exclude reference="HBb-ab-GPF"/>
+                                <exclude reference="cmJ-46-l4a"/>
+                                <exclude reference="eVF-ee-075"/>
+                                <exclude reference="wAa-vP-8ru"/>
+                                <exclude reference="R6a-Pp-wy5"/>
+                                <exclude reference="09O-ZE-4QW"/>
+                                <exclude reference="Zhg-Yl-joE"/>
+                                <exclude reference="a7T-mx-tBr"/>
+                                <exclude reference="w7A-4V-qnC"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="eAC-6w-EDj"/>
+                                <include reference="L0k-DD-QSi"/>
+                                <include reference="3S2-eG-HFE"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1Zf-on-n4q"/>
+                                <include reference="HBb-ab-GPF"/>
+                                <include reference="cmJ-46-l4a"/>
+                                <include reference="eVF-ee-075"/>
+                                <include reference="wAa-vP-8ru"/>
+                                <include reference="R6a-Pp-wy5"/>
+                                <include reference="09O-ZE-4QW"/>
+                                <include reference="Zhg-Yl-joE"/>
+                                <exclude reference="a7T-mx-tBr"/>
+                                <include reference="w7A-4V-qnC"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
